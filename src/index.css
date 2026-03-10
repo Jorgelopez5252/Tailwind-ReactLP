@@ -1,3 +1,5 @@
 @import "tailwindcss";
 
-/* Add my custom styles here */
+p{
+  font: red;
+}
