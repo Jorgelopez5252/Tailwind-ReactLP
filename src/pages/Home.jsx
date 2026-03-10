@@ -1,13 +1,11 @@
 import { Navbar } from "../components/Navbar";
 
 export const Home = () => {
-    return (
-        <div>
-            <Navbar />
+  return (
+    <div>
+      <Navbar />
 
-            <main>
-
-            </main>
-        </div>
-    )
-}
+      <main></main>
+    </div>
+  );
+};
