@@ -5,7 +5,7 @@ const HeroSection = () => {
   const videos = [video1, video2];
 
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
+    <div id="hero" className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
         VirtuCraft build tools{" "}
         <span className="bg-linear-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
