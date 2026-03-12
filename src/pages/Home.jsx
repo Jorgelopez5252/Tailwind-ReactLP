@@ -4,6 +4,7 @@ import { FeatureSection } from "../components/FeatureSection";
 import { Workflow } from "../components/WorkFlowSection";
 import {Pricing} from  "../components/PricingSection"
 import { Testimonials } from "../components/TestimonialSection";
+import {Footer} from "../components/Footer";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
         <Workflow />
         <Pricing />
         <Testimonials />
+        <Footer />
       </div>
       <main></main>
     </div>
