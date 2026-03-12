@@ -2,6 +2,7 @@ import { Navbar } from "../components/Navbar";
 import { HeroSection } from "../components/HeroSection";
 import { FeatureSection } from "../components/FeatureSection";
 import { Workflow } from "../components/WorkFlow";
+import {Pricing} from  "../components/Pricing"
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
         <HeroSection />
         <FeatureSection />
         <Workflow />
+        <Pricing />
       </div>
       <main></main>
     </div>
