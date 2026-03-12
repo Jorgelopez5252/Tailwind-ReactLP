@@ -1,7 +1,9 @@
 import { CheckCircle2 } from "lucide-react";
 import { pricingOptions } from "../constants";
+import { useComingSoon } from "../components/ComingSoonContext";
 
 const Pricing = () => {
+  const { openComingSoon } = useComingSoon();
   return (
     <div id="pricing" className="mt-20">
       <h2 className="text-3xl sm:5xl lg:text-6xl text-center my-8 tracking-wide">
@@ -33,6 +35,10 @@ const Pricing = () => {
               </ul>
               <a
                 href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openComingSoon();
+                }}
                 className="inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200"
               >
                 Subscribe

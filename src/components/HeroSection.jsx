@@ -1,8 +1,10 @@
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
+import { useComingSoon } from "../components/ComingSoonContext";
 
 const HeroSection = () => {
   const videos = [video1, video2];
+  const { openComingSoon } = useComingSoon();
 
   return (
     <div id="hero" className="flex flex-col items-center mt-6 lg:mt-20">
@@ -22,12 +24,23 @@ const HeroSection = () => {
       <div className="flex justify-center my-10">
         <a
           href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            openComingSoon();
+          }}
           className="bg-linear-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
         >
           Start for Free
         </a>
 
-        <a href="#" className="py-3 px-4 mx-3 rounded-md border">
+        <a
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            openComingSoon();
+          }}
+          className="py-3 px-4 mx-3 rounded-md border"
+        >
           Documentation
         </a>
       </div>

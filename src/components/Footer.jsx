@@ -1,5 +1,8 @@
 import { resourcesLinks, platformLinks, communityLinks } from "../constants";
+import { useComingSoon } from "../components/ComingSoonContext";
+
 const Footer = () => {
+  const { openComingSoon } = useComingSoon();
   return (
     <footer className="mt-20 border-t py-10 border-neutral-700">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
@@ -9,6 +12,10 @@ const Footer = () => {
             {resourcesLinks.map((link, index) => (
               <li key={index}>
                 <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openComingSoon();
+                  }}
                   href={link.href}
                   className="text-neutral-300 hover:text-white"
                 >
@@ -24,6 +31,10 @@ const Footer = () => {
             {platformLinks.map((link, index) => (
               <li key={index}>
                 <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openComingSoon();
+                  }}
                   href={link.href}
                   className="text-neutral-300 hover:text-white"
                 >
@@ -39,6 +50,10 @@ const Footer = () => {
             {communityLinks.map((link, index) => (
               <li key={index}>
                 <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openComingSoon();
+                  }}
                   href={link.href}
                   className="text-neutral-300 hover:text-white"
                 >

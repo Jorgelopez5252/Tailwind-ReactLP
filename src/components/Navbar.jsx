@@ -2,9 +2,11 @@ import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useComingSoon } from "../components/ComingSoonContext";
 
 export const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const { openComingSoon } = useComingSoon();
 
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
@@ -16,7 +18,7 @@ export const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight" >
+            <span className="text-xl tracking-tight">
               <a href="#hero">VirtuCraft</a>
             </span>
           </div>
@@ -29,12 +31,23 @@ export const Navbar = () => {
           </ul>
 
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openComingSoon();
+              }}
+              className="py-2 px-3 border rounded-md"
+            >
               Sign In
             </a>
 
             <a
               href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                openComingSoon();
+              }}
               className="bg-linear-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
             >
               Create an Account
@@ -58,13 +71,24 @@ export const Navbar = () => {
               ))}
             </ul>
 
-            <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
+            <div className="flex flex-col space-x-6">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openComingSoon();
+                }}
+                className="py-2 px-3 border mb-5 rounded-md"
+              >
                 Sign In
               </a>
 
               <a
                 href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openComingSoon();
+                }}
                 className="py-2 px-3 bg-linear-to-r from-orange-500 to-orange-800 rounded-md"
               >
                 Create an&nbsp;Account
