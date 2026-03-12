@@ -5,3 +5,11 @@
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#workflow, #feature, #pricing, #testimonials {
+  scroll-margin-top: 100px;
+}
