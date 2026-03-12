@@ -31,7 +31,6 @@ export const Navbar = () => {
               Sign In
             </a>
 
-           
             <a
               href="#"
               className="bg-linear-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md"
@@ -40,7 +39,6 @@ export const Navbar = () => {
             </a>
           </div>
 
-       
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}
@@ -50,9 +48,7 @@ export const Navbar = () => {
 
         {mobileDrawerOpen && (
           <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-          
             <ul>
-            
               {navItems.map((item, index) => (
                 <li key={index} className="py-4">
                   <a href={item.href}>{item.label}</a>
@@ -60,7 +56,6 @@ export const Navbar = () => {
               ))}
             </ul>
 
-          
             <div className="flex space-x-6">
               <a href="#" className="py-2 px-3 border rounded-md">
                 Sign In
@@ -70,7 +65,6 @@ export const Navbar = () => {
                 href="#"
                 className="py-2 px-3 bg-linear-to-r from-orange-500 to-orange-800 rounded-md"
               >
-               
                 Create an&nbsp;Account
               </a>
             </div>
