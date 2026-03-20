@@ -21,29 +21,29 @@ const HeroSection = () => {
         into immersive reality.
       </p>
 
-      <div className="flex justify-center my-10">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            openComingSoon();
-          }}
-          className="bg-linear-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
-        >
-          Start for Free
-        </a>
+ <div className="flex flex-col sm:flex-row justify-center items-center my-10">
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      openComingSoon();
+    }}
+    className="bg-linear-to-r from-orange-500 to-orange-800 py-3 px-4 my-2 sm:mx-3 rounded-md"
+  >
+    Start for Free
+  </a>
 
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            openComingSoon();
-          }}
-          className="py-3 px-4 mx-3 rounded-md border"
-        >
-          Documentation
-        </a>
-      </div>
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      openComingSoon();
+    }}
+    className="py-3 px-4 my-2 sm:mx-3 rounded-md border"
+  >
+    Documentation
+  </a>
+</div>
 
       <div className="flex flex-col lg:flex-row mt-10 justify-center items-center">
         {/* map through the videos array and render a video element for each video source */}
